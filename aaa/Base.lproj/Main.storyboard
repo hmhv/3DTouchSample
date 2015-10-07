@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="fRf-H0-ie6">
+                                <rect key="frame" x="20" y="54" width="560" height="170"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="vcU-Ul-Zab"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fRf-H0-ie6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="34" id="1Eq-DB-3pl"/>
+                            <constraint firstAttribute="trailing" secondItem="fRf-H0-ie6" secondAttribute="trailing" constant="20" id="Nea-gw-YEQ"/>
+                            <constraint firstItem="fRf-H0-ie6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="mwf-Db-OG4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="fRf-H0-ie6" id="PDW-BU-IoO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="435" y="213"/>
+        </scene>
+        <!--Red Image View Controller-->
+        <scene sceneID="N6g-0u-gXG">
+            <objects>
+                <viewController storyboardIdentifier="RedImageViewController" id="7pG-P5-2hy" customClass="RedImageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VWL-21-Bpr"/>
+                        <viewControllerLayoutGuide type="bottom" id="NNr-9M-AGJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eRS-jn-ceB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="Peg-KC-sbS">
+                                <rect key="frame" x="20" y="68" width="560" height="512"/>
+                                <animations/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wh-wx-MNf">
+                                <rect key="frame" x="20" y="35" width="77" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="77" id="Yta-ep-fdG"/>
+                                    <constraint firstAttribute="height" constant="30" id="dI4-Ko-WZv"/>
+                                </constraints>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="dismissVC:" destination="7pG-P5-2hy" eventType="touchUpInside" id="9Xg-G6-gPY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="0wh-wx-MNf" firstAttribute="leading" secondItem="eRS-jn-ceB" secondAttribute="leading" constant="20" id="Ad0-iU-EJA"/>
+                            <constraint firstAttribute="trailing" secondItem="Peg-KC-sbS" secondAttribute="trailing" constant="20" id="eRU-TK-pXG"/>
+                            <constraint firstItem="NNr-9M-AGJ" firstAttribute="top" secondItem="Peg-KC-sbS" secondAttribute="bottom" constant="20" id="oVU-gj-RCy"/>
+                            <constraint firstItem="Peg-KC-sbS" firstAttribute="leading" secondItem="eRS-jn-ceB" secondAttribute="leading" constant="20" id="qb5-Uf-KYC"/>
+                            <constraint firstItem="Peg-KC-sbS" firstAttribute="top" secondItem="VWL-21-Bpr" secondAttribute="bottom" constant="48" id="qzL-NZ-r3N"/>
+                            <constraint firstItem="Peg-KC-sbS" firstAttribute="top" secondItem="0wh-wx-MNf" secondAttribute="bottom" constant="3" id="w6E-ec-BZR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="0wh-wx-MNf" id="IXi-x9-PUJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8B8-VB-IcX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1038" y="-13"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="profile" width="512" height="512"/>
+    </resources>
+</document>
