@@ -1,4 +1,3 @@
-iOS9からの3D Touch実装の簡単メモ
 
 ##3D Touch
 
