@@ -31,7 +31,7 @@
 {
     NSLog(@"peek");
     
-    previewingContext.sourceRect = self.imageView.frame;
+    previewingContext.sourceRect = CGRectMake(0, 0, previewingContext.sourceView.frame.size.width, previewingContext.sourceView.frame.size.height);
     
     RedImageViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"RedImageViewController"];
     vc.preferredContentSize = CGSizeMake(0, 300);
